@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMA VIIVACE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+  <header>
+   <div class="logo">UMA VIIVACE</div>
+   <nav>
+    <ul>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <button onclick="searchFunction()">Search</button>
+    </div>
+    <li><a href="login.html">Login</a></li>
+    <div class="cart-container" onclick="toggleCart()">
+      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+
+        
+        
+    </ul>
+   </nav>
+  
+</div>
+</div>
+  </header>
+
+  <main>
+    <main>
+
+      <div class="banner">
+  
+        <div class="container">
+  
+          <div class="slider-container has-scrollbar">
+  
+            <div class="slider-item">
+  
+              <img src="82.png" alt="Our latest fashion sale" class="banner-img">
+  
+              <div class="banner-content">
+  
+                <p class="banner-subtitle">Trending item<br>Price - 200$</br></p>
+  
+                <h2 class="banner-title">Our latest fashion sale</h2>
+  
+             
+              </div>
+  
+            </div>
+  
+            <div class="slider-item">
+  
+              <img src="85.png" alt="Our latest fashion sale" class="banner-img">
+  
+              <div class="banner-content">
+  
+                <p class="banner-subtitle">Trending items<br>Price - 800$</br></p>
+  
+                <h2 class="banner-title">Our latest fashion sale</h2>
+  
+  
+              </div>
+  
+            </div>
+  
+            <div class="slider-item">
+  
+              <img src="75.jpg" alt="Our latest fashion sale" class="banner-img" >
+  
+              <div class="banner-content">
+  
+                <p class="banner-subtitle">Trending item <br>Price - 300$</br></p>
+  
+                <h2 class="banner-title">Our latest fashion sale</h2>
+  
+               
+              </div>
+  
+            </div>
+  
+          </div>
+
+<section class="products">
+  <div class="product" data-name="Jean Jacket" data-price="20" data-image="43.jpg" onclick="showDetails('Jean Jacket', 20, '43.jpg', 'made with steeze.')">
+      <img src="43.jpg" alt="Jean Jacket">
+      <h3>Jean Jacket</h3>
+      <p>Price: $20</p>
+      <button onclick="addToCart('Jean Jacket', 20, '43.jpg')">Add to Cart</button>
+  </div>
+  <div class="product" data-name="Designer Blazer" data-price="30" data-image="85.png" onclick="showDetails('Designer Blazer', 30, '85.png', 'made with steeze.')">
+      <img src="85.png" alt="Designer Blazer">
+      <h3>Designer Blazer</h3>
+      <p>Price: $30</p>
+      <button onclick="addToCart('Designer Blazer', 30, '85.png')">Add to Cart</button>
+  </div>
+  <div class="product" data-name="Sweat Shirt" data-price="40" data-image="84.png" onclick="showDetails('Sweat Shirt', 40, '84.png', 'made with steeze')">
+      <img src="84.png" alt="Sweat Shirt">
+      <h3>Sweat Shirt</h3>
+      <p>Price: $40</p>
+      <button onclick="addToCart('Sweat Shirt', 40, '84.png')">Add to Cart</button>
+</div>
+
+</section>
+
+<!-- Product Details Modal (Initially Hidden) -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h2 id="productName">Sweat Shirt</h2>
+      <img id="productImage" src="84.png" alt="Product Image">
+      <p id="productPrice">Price: $0</p>
+      <p id="productDescription">Made with Steeze</p>
+      <button onclick="addToCartFromModal()">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Cart Popup (Initially Hidden) -->
+<div id="cartPopup" class="cart-popup">
+  <div class="cart-popup-content">
+      <span class="close-btn" onclick="toggleCart()">×</span>
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <p>Total: $<span id="totalPrice">0</span></p>
+      <p>Your Cart is empty😂😂😂</p>
+  </div>
+</div>
+         
+                      
+                    </div>
+                </div>
+            </div>
+         
+      <div class="banner">
+  
+        <div class="container">
+  
+          <div class="slider-container has-scrollbar">
+  
+            <div class="slider-item">
+  
+              <img src="76.jpg" alt="Our latest fashion sale" class="banner-img">
+  
+              <div class="banner-content">
+  
+                <p class="banner-subtitle">2023 Collections<br>Price - 200$</br></p>
+  
+                <h2 class="banner-title">2023</h2>
+  
+             
+              </div>
+  
+            </div>
+  
+            <div class="slider-item">
+  
+              <img src="85.png" alt="Our latest fashion sale" class="banner-img">
+  
+              <div class="banner-content">
+  
+                <p class="banner-subtitle">2024 Collections<br>Price - 800$</br></p>
+  
+                <h2 class="banner-title">2024</h2>
+  
+  
+                
+              </div>
+
+            
+  
+        </section>
+
+        
+        
+  
+        </div>
+  
+      </div>
+   
+  </main>
+  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  <div class="footer-container">
+      <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>We are a leading online fashion store offering high-quality products at the best prices. Your satisfaction is our top priority.</p>
+          <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+
+      <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p><i class="fas fa-map-marker-alt"></i> Abuja, Nigeria</p>
+          <p><i class="fas fa-phone-alt"></i> +234 8029478479</p>
+          <p><i class="fas fa-envelope"></i> support@UMAVIIVACE@gmail.com</p>
+      </div>
+
+      <div class="footer-section newsletter">
+          <h2>Newsletter</h2>
+          <p>Subscribe to our newsletter for the latest updates and special offers.</p>
+          <div id="newsletter-form">
+          <input type="email" id="email input" placeholder="Enter your email" required>
+          <br>
+          <br>
+          <button id="subscribeButton">Subscribe</button>
+            </div>
+            <div id="successMessage" style="display:none; color: orange;">
+                <p>Congrats, you've signed up!</p>
+          <br>
+          <br>
+          <button>Subscribe</button>
+      </div>
+  </div>
+
+  <div class="footer-bottom">
+      <p>&copy; 2024 UMA VIIVACE. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+  </body>
+  </html>
